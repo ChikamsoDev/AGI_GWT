@@ -1,0 +1,39 @@
+# Virtual environment
+venv/
+ai-env/
+
+# Python cache
+__pycache__/
+*.pyc
+.pytest_cache
+
+# IDE
+.vscode/
+
+# Temporary experiments
+experiments/
+
+# Personal notes
+notes/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# not to upload
+noise/
+book-scraper/
+learning/
+memory/
+perception/
+planning/
+previous/
+reasoning/
+social_cognition/
+training OOP/
+world_model/
+tests/
+GWT/__pycache__
+conftest.py
+main.py
+persistence.py
