@@ -24,7 +24,6 @@ Thumbs.db
 noise/
 book-scraper/
 learning/
-memory/
 perception/
 planning/
 previous/
@@ -34,6 +33,15 @@ training OOP/
 world_model/
 tests/
 GWT/__pycache__
+GWT/noise
+memory/__pycache__
+memory/WM
+memory/.md
+memory/test_memory.py
 conftest.py
 main.py
 persistence.py
+threading
+alignment_notes.md
+test_gwt.py
+

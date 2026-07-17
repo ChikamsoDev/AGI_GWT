@@ -4,30 +4,29 @@ A personal project where I'm building an AI cognitive architecture from scratch 
 
 The goal is to build individual cognitive components inspired by neuroscience and cognitive science, then integrate them into a complete intelligent system.
 
-Current progress:
+## Current Progress
 
 - ✅ Global Workspace Theory (GWT)
-- ⏳ Memory System
+- ✅ Memory System
 - ⏳ Attention
 - ⏳ Reasoning
 - ⏳ Planning
 - ⏳ Learning
+- ⏳ Perception
+- ⏳ World Model
+- ⏳ Social Cognition
 
 ---
 
-## Module 1: Global Workspace Theory
+# Module 1: Global Workspace Theory
 
-The Global Workspace acts as the central communication hub as well as the entry point into this project due to the simple fact that building the AI to work in isolation with no clear communication mechanism would result in failure.
+The Global Workspace serves as the communication backbone of the architecture. Rather than allowing modules to operate independently, it provides a shared workspace where information competes for attention before being broadcast to every subscribed module.
 
-Modules compete for attention by submitting messages with priorities.
-
-The highest-priority message is broadcast to every subscribed module.
-
-Current features include:
+### Features
 
 - Priority-based competition
 - Thread-safe message queue
-- Priority decay over time
+- Priority decay
 - Message expiration
 - Subscriber system
 - Continuous broadcast loop
@@ -35,33 +34,69 @@ Current features include:
 
 ---
 
+# Module 2: Memory
+
+The Memory module stores high-value experiences as **episodes** instead of saving every incoming message. Incoming broadcasts are evaluated using salience and grouped into meaningful experiences through event boundary detection.
+
+### Features
+
+- Salience-based memory storage
+- Event boundary detection
+- Novelty detection
+- Episodic memory representation
+- Memory retrieval
+- Memory consolidation stages
+- Retrieval statistics
+
+---
+
 ## Technologies
 
 - Python
-- heapq
-- threading
 - dataclasses
+- threading
+- heapq
 - logging
 - typing
+- uuid
+- datetime
 
 ---
 
-## Future Goals
+## Planned Modules
 
-- Episodic memory
-- Semantic memory
-- Executive control
-- Attention system
-- Long-term planning
-- Learning algorithms
+- Perception
+- World Model
+- Attention
+- Learning
+- Reasoning
+- Planning
+- Decision Making
+- Social Cognition
+- Language
+- Metacognition
 
 ---
 
-## Folder structure
+## Folder Structure
+
+```text
 ai-base/
 │
 ├── GWT/
+│   ├── __init__.py
 │   ├── base_module.py
 │   ├── global_workspace.py
-│   ├── messages.py
-│   └── __init__.py
+│   └── messages.py
+│
+├── memory/
+│   ├── __init__.py
+│   └── memory.py
+│   
+│
+└── README.md
+```
+
+## Project Vision
+
+This repository documents the incremental development of an AGI-inspired cognitive architecture. Rather than relying on a single monolithic model, each cognitive capability is implemented as an independent module before being integrated into a larger intelligent system.
